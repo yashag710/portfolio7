@@ -38,7 +38,7 @@ export default function Hero() {
             {/* Image Container */}
             <div className="relative w-full h-full rounded-full overflow-hidden z-10 group">
               <Image
-                src="/images/yash_front6.png"
+                src="/images/photos/yash_front6.png"
                 alt="Yash"
                 fill
                 className="object-cover rounded-full scale-[1.08] translate-y-2 transition-transform duration-500 ease-out group-hover:scale-[1.12]"
