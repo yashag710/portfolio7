@@ -104,26 +104,31 @@ const Navbar = () => {
                   Home
                 </a>
                 <a
-                  href="#"
+                  href="#works"
                   className="text-gray-200/90 hover:text-white transition-colors text-xl font-cabin"
                 >
                   Works
                 </a>
                 <a
-                  href="#"
+                  href="/YASH AGARWAL RESUME.pdf"
+                  download="Resume.pdf"
                   className="text-gray-200/90 hover:text-white transition-colors text-xl font-cabin"
                 >
                   Resume
                 </a>
                 <a
-                  href="#"
+                  href="#about"
                   className="text-gray-200/90 hover:text-white transition-colors text-xl font-cabin"
                 >
                   About
                 </a>
-                <button className="bg-white/90 hover:bg-white text-black px-6 py-2.5 rounded-full text-lg font-medium font-cabin shadow-lg transition-colors">
-                  Contact
-                </button>
+                <a 
+                  href="#contact"
+                >
+                  <button className="bg-white/90 hover:bg-white text-black px-6 py-2.5 rounded-full text-lg font-medium font-cabin shadow-lg transition-colors">
+                    Contact
+                  </button>
+                </a>
               </nav>
             </motion.div>
           )}
