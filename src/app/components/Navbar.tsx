@@ -59,7 +59,8 @@ const Navbar = () => {
             Works
           </a>
           <a
-            href="#"
+            href="/YASH AGARWAL RESUME.pdf"
+            download="Resume.pdf"
             className="text-gray-200/90 hover:text-white transition-colors text-lg font-cabin"
           >
             Resume
