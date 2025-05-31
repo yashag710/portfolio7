@@ -23,6 +23,7 @@ export default function Footer() {
 });
   };
   return (
+  <section id="contact">
     <footer className="relative overflow-hidden border-t border-neutral-800">
       <div className="absolute inset-0 bg-neutral-950/40 backdrop-blur-3xl" />
       <div className="container relative z-10 mx-auto px-4 sm:px-8 lg:px-16 xl:px-24 py-16 sm:py-20 lg:py-24 max-w-7xl">
@@ -153,5 +154,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+  </section>
   );
 }
