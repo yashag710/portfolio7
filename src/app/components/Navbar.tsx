@@ -53,7 +53,7 @@ const Navbar = () => {
             Home
           </a>
           <a
-            href="#"
+            href="#works"
             className="text-gray-200/90 hover:text-white transition-colors text-lg font-cabin"
           >
             Works
@@ -65,7 +65,7 @@ const Navbar = () => {
             Resume
           </a>
           <a
-            href="#"
+            href="#about"
             className="text-gray-200/90 hover:text-white transition-colors text-lg font-cabin"
           >
             About
