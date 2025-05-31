@@ -74,10 +74,13 @@ const Navbar = () => {
         </nav>
 
         {/* Desktop Contact Button */}
-        <button className="hidden md:block bg-white/90 hover:bg-white text-black px-6 py-2.5 rounded-full text-base font-medium font-cabin shadow-lg transition-colors">
-          Contact
-        </button>
-
+        <a 
+          href="#contact"
+        >
+          <button className="hidden md:block bg-white/90 hover:bg-white text-black px-6 py-2.5 rounded-full text-base font-medium font-cabin shadow-lg transition-colors">
+            Contact
+          </button>
+        </a>
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
