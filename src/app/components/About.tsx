@@ -38,7 +38,7 @@ const imageVariants = {
 
 export default function About() {
   return (
-    <section className="relative bg-transparent text-white overflow-hidden">
+    <section id="about" className="relative bg-transparent text-white overflow-hidden">
       {/* Top Separator Line */}
       <div className="relative z-50">
         <div className="mx-auto w-screen border-t border-white/70 opacity-40" />
