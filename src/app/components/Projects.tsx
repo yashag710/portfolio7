@@ -75,14 +75,14 @@ export default function ProjectsPage() {
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="relative bg-gray-900 rounded-xl overflow-hidden aspect-[1/1.2] shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-2">
-            <ThreeDMarquee images={proj1} />
+            <ThreeDMarquee images={proj1} link="https://www.hackthechain.in/" />
           </div>
           <div className="space-y-8">
             <div className="relative bg-gray-900 rounded-xl overflow-hidden aspect-video shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-2">
-              <ThreeDMarquee images={proj2} />
+              <ThreeDMarquee images={proj2} link="#" />
             </div>
             <div className="relative bg-gray-900 rounded-xl overflow-hidden aspect-video shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-2">
-              <ThreeDMarquee images={proj3} />
+              <ThreeDMarquee images={proj3} link="https://tap-ins.vercel.app/" />
             </div>
           </div>
         </div>

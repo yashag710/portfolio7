@@ -3,17 +3,32 @@
 import { motion } from "motion/react";
 import { cn } from "../../lib/utils";
 
+import React, { useState } from "react";
+
 export const ThreeDMarquee = ({
   images,
   className,
+  heading,
+  description,
+  link,
 }: {
   images: string[];
   className?: string;
+  heading?: string;
+  description?: string;
+  link?: string;
 }) => {
+  const [hovered, setHovered] = useState(false);
   const chunkSize = Math.ceil(images.length / 4);
   const columns = Array.from({ length: 4 }, (_, i) =>
     images.slice(i * chunkSize, i * chunkSize + chunkSize)
   );
+
+  const handleClick = () => {
+    if (link) {
+      window.open(link, "_blank");
+    }
+  };
 
   return (
     <div
@@ -21,6 +36,8 @@ export const ThreeDMarquee = ({
         "relative mx-auto h-full overflow-hidden rounded-2xl",
         className
       )}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
       {/* 3D perspective container */}
       <div className="absolute inset-0 perspective-[1000px]">
@@ -65,6 +82,15 @@ export const ThreeDMarquee = ({
             </div>
           </div>
         </div>
+      </div>
+      {/* Overlay */}
+      <div
+        className={`absolute inset-0 flex flex-col items-center justify-center bg-black/80 transition-all duration-500 z-20 cursor-pointer ${hovered ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}
+        onClick={handleClick}
+      >
+        <h2 className="text-2xl font-bold text-white mb-2">{heading}</h2>
+        <p className="text-base text-gray-300 mb-4 text-center px-4">{description}</p>
+        <span className="px-4 py-2 bg-violet-600 text-white rounded-lg shadow hover:bg-violet-700 transition">Open Project</span>
       </div>
     </div>
   );

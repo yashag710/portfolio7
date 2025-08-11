@@ -116,12 +116,12 @@ export default function Hero() {
             className="mt-4 sm:mt-6 flex items-center gap-4 sm:gap-6 text-lg sm:text-xl md:text-2xl"
           >
             {/* Social Icons */}
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" 
+            <a href="https://github.com/yashag710" target="_blank" rel="noopener noreferrer" 
                className="text-white/70 hover:text-white transition-colors duration-200">
               <FaGithub />
             </a>
             <span className="text-gray-600">|</span>
-            <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer"
+            <a href="https://x.com/yashag710" target="_blank" rel="noopener noreferrer"
                className="text-white/70 hover:text-white transition-colors duration-200">
               <FaXTwitter />
             </a>

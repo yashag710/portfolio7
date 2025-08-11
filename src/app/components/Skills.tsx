@@ -9,37 +9,67 @@ export function Skills() {
     {
       title: "Blockchain Development",
       image: "/images/skills/blockchain.webp",
-      className: "absolute top-[10%] left-[10%] md:top-[15%] md:left-[20%] rotate-[-3deg]",
+      className: "absolute top-[8%] left-[8%] md:top-[10%] md:left-[10%] rotate-[-3deg]",
+    },
+    {
+      title: "C++ Language",
+      image: "/images/skills/cpp.png",
+      className: "absolute top-[20%] left-[18%] md:top-[22%] md:left-[18%] rotate-[2deg]",
+    },
+    {
+      title: "Cascading Style Sheets",
+      image: "/images/skills/css.png",
+      className: "absolute top-[35%] left-[7%] md:top-[38%] md:left-[8%] rotate-[-6deg]",
+    },
+    {
+      title: "Hyper Text Markup Language",
+      image: "/images/skills/html.png",
+      className: "absolute top-[55%] left-[15%] md:top-[58%] md:left-[12%] rotate-[5deg]",
+    },
+    {
+      title: "Solidity",
+      image: "/images/skills/solidity.jpg",
+      className: "absolute top-[70%] left-[8%] md:top-[72%] md:left-[10%] rotate-[-2deg]",
+    },
+    {
+      title: "Javascript",
+      image: "/images/skills/js.png",
+      className: "absolute top-[10%] right-[10%] md:top-[12%] md:right-[12%] rotate-[4deg]",
+    },
+    {
+      title: "Docker",
+      image: "/images/skills/docker.png",
+      className: "absolute top-[25%] right-[18%] md:top-[28%] md:right-[18%] rotate-[-5deg]",
     },
     {
       title: "MongoDB",
       image: "/images/skills/mongodb.webp",
-      className: "absolute top-[20%] right-[15%] md:top-[25%] md:right-[25%] rotate-[5deg]",
+      className: "absolute top-[40%] right-[8%] md:top-[42%] md:right-[10%] rotate-[3deg]",
     },
     {
       title: "React & Next.js",
       image: "/images/skills/nextjs.webp",
-      className: "absolute top-[40%] left-[20%] md:top-[45%] md:left-[15%] rotate-[-4deg]",
+      className: "absolute top-[60%] right-[15%] md:top-[62%] md:right-[12%] rotate-[-4deg]",
     },
     {
       title: "TypeScript",
       image: "/images/skills/typescript.webp",
-      className: "absolute top-[30%] left-[40%] md:top-[20%] md:left-[45%] rotate-[6deg]",
+      className: "absolute top-[75%] right-[8%] md:top-[78%] md:right-[10%] rotate-[6deg]",
     },
     {
       title: "Tailwind CSS",
       image: "/images/skills/tailwindcss.webp",
-      className: "absolute top-[50%] right-[20%] md:top-[55%] md:right-[25%] rotate-[-5deg]",
+      className: "absolute top-[30%] left-[40%] md:top-[32%] md:left-[45%] rotate-[-5deg]",
     },
     {
       title: "Node.js",
       image: "/images/skills/nodejs.webp",
-      className: "absolute top-[65%] left-[25%] md:top-[70%] md:left-[30%] rotate-[4deg]",
+      className: "absolute top-[50%] left-[50%] md:top-[52%] md:left-[55%] rotate-[4deg]",
     },
     {
       title: "Apache Kafka",
       image: "/images/skills/kafka.webp",
-      className: "absolute top-[75%] right-[30%] md:top-[80%] md:right-[20%] rotate-[-6deg]",
+      className: "absolute top-[65%] right-[30%] md:top-[68%] md:right-[20%] rotate-[-6deg]",
     },
   ];
 
@@ -74,17 +104,17 @@ export function Skills() {
                 className={skill.className}
               >
                 <div className="relative group">
-                  <div className="pointer-events-none relative z-10 h-28 w-28 sm:h-36 sm:w-36 md:h-44 md:w-44 lg:h-52 lg:w-52 rounded-2xl bg-neutral-900/80 p-3 sm:p-4 md:p-5 lg:p-6 backdrop-blur-sm border border-white/10 shadow-xl transition-all duration-300 group-hover:border-white/20 group-hover:bg-neutral-900/90">
+                  <div className="pointer-events-none relative z-10 h-32 w-32 sm:h-40 sm:w-40 md:h-52 md:w-52 lg:h-60 lg:w-60 rounded-2xl bg-neutral-900/80 p-4 sm:p-5 md:p-6 lg:p-7 backdrop-blur-sm border border-white/10 shadow-xl transition-all duration-300 group-hover:border-white/20 group-hover:bg-neutral-900/90">
                     <Image
                       src={skill.image}
                       alt={skill.title}
                       fill
-                      sizes="(max-width: 640px) 112px, (max-width: 768px) 144px, (max-width: 1024px) 176px, 208px"
-                      className="p-2 sm:p-3 md:p-4 lg:p-5 object-contain transition-transform duration-300 group-hover:scale-110"
+                      sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, (max-width: 1024px) 208px, 240px"
+                      className="p-3 sm:p-4 md:p-5 lg:p-6 object-contain transition-transform duration-300 group-hover:scale-110"
                     />
                   </div>
                   <div className="absolute -inset-4 rounded-2xl bg-gradient-to-r from-violet-500 to-fuchsia-500 opacity-0 blur-2xl transition duration-300 group-hover:opacity-10" />
-                  <h3 className="mt-4 sm:mt-5 text-center text-sm sm:text-base md:text-lg lg:text-xl font-medium text-neutral-300 opacity-0 transform translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                  <h3 className="mt-4 sm:mt-5 text-center text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-neutral-300 opacity-0 transform translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
                     {skill.title}
                   </h3>
                 </div>
