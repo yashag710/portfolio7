@@ -23,6 +23,7 @@ export default function Footer() {
 });
   };
   return (
+  <section id="contact">
     <footer className="relative overflow-hidden border-t border-neutral-800">
       <div className="absolute inset-0 bg-neutral-950/40 backdrop-blur-3xl" />
       <div className="container relative z-10 mx-auto px-4 sm:px-8 lg:px-16 xl:px-24 py-16 sm:py-20 lg:py-24 max-w-7xl">
@@ -39,7 +40,7 @@ export default function Footer() {
             </div>
               <div className="flex items-center space-x-4 sm:space-x-6">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/yashag710"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative rounded-full bg-neutral-900 p-2 sm:p-3 transition-all hover:bg-neutral-800"
@@ -47,7 +48,7 @@ export default function Footer() {
                 <Github className="h-4 w-4 sm:h-5 sm:w-5 text-neutral-400 transition-colors group-hover:text-white" />
               </a>
               <a
-                href="https://linkedin.com/in/yourhandle"
+                href="https://www.linkedin.com/in/yash-agarwalcr710"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative rounded-full bg-neutral-900 p-3 transition-all hover:bg-neutral-800"
@@ -55,7 +56,7 @@ export default function Footer() {
                 <Linkedin className="h-5 w-5 text-neutral-400 transition-colors group-hover:text-white" />
               </a>
               <a
-                href="https://twitter.com/yourhandle"
+                href="https://x.com/yashag710"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative rounded-full bg-neutral-900 p-3 transition-all hover:bg-neutral-800"
@@ -63,7 +64,7 @@ export default function Footer() {
                 <Twitter className="h-5 w-5 text-neutral-400 transition-colors group-hover:text-white" />
               </a>
               <a
-                href="https://instagram.com/yourhandle"
+                href="https://www.instagram.com/yashagarwal710/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative rounded-full bg-neutral-900 p-3 transition-all hover:bg-neutral-800"
@@ -153,5 +154,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+  </section>
   );
 }

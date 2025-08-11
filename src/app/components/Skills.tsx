@@ -74,7 +74,7 @@ export function Skills() {
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-black to-neutral-900 font-cabin overflow-hidden">
+    <section id="skills" className="relative bg-gradient-to-b from-black to-neutral-900 font-cabin overflow-hidden">
       {/* Top Separator */}
       <div className="relative z-50">
         <div className="mx-auto w-screen border-t border-white/70 opacity-40" />
