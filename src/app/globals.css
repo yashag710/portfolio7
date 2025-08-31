@@ -19,6 +19,29 @@
   }
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #101010; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #E6E6E6; 
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
 body {
   background: var(--background);
   color: var(--foreground);

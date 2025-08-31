@@ -17,16 +17,6 @@ export function Skills() {
       className: "absolute top-[20%] left-[18%] md:top-[22%] md:left-[18%] rotate-[2deg]",
     },
     {
-      title: "Cascading Style Sheets",
-      image: "/images/skills/css.png",
-      className: "absolute top-[35%] left-[7%] md:top-[38%] md:left-[8%] rotate-[-6deg]",
-    },
-    {
-      title: "Hyper Text Markup Language",
-      image: "/images/skills/html.png",
-      className: "absolute top-[55%] left-[15%] md:top-[58%] md:left-[12%] rotate-[5deg]",
-    },
-    {
       title: "Solidity",
       image: "/images/skills/solidity.jpg",
       className: "absolute top-[70%] left-[8%] md:top-[72%] md:left-[10%] rotate-[-2deg]",
