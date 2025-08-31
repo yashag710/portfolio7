@@ -40,7 +40,7 @@ export async function POST(request : NextRequest){
     console.log('Password:', process.env.EMAIL_PASS);
   
     await sendContactEmail(name, email, message);
-    return  res.json({success : true, message: 'Email sent successfully!' });
+    return  res.json({ success : true, message: 'Email sent successfully!' });
   } catch (err) {
     console.error('Email send error:', err);
     return res.json({ success : false, error: 'Failed to send email' });
