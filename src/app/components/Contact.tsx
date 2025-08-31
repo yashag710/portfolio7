@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Instagram,
   Linkedin,
@@ -9,19 +9,36 @@ import {
   Github,
 } from "lucide-react";
 import { cn } from "../lib/utils";
+import { toast } from "react-hot-toast";
 
 export default function Footer() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState(false);
 
-  const handleSubmit = async() => {
-    await fetch('/api/contact', {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const response = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, message }),
-});
+    });
+    // Assuming your API returns { success: true }
+    const data = await response.json();
+    setSuccess(data.success);
   };
+
+  useEffect(() => {
+    if (success) {
+      toast.success("Email sent successfully!", { position: "top-center" });
+      setSuccess(false);
+      setName("");
+      setEmail("");
+      setMessage("");
+    }
+  }, [success]);
+
   return (
   <section id="contact">
     <footer className="relative overflow-hidden border-t border-neutral-800">
