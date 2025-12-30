@@ -1,80 +1,144 @@
 "use client";
-import React from "react";
+
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const education = [
+  {
+    year: "2023",
+    degree: "Intermediate",
+    institution: "City Montessori School",
+    points: ["Science & Mathematics", "Passed with distinction"],
+  },
+  {
+    year: "2023 – 2027",
+    degree: "B.Tech in Computer Science",
+    institution: "IIIT Kota",
+    points: ["Core CS foundations", "DSA, Web Development"],
+  },
+];
 
 export default function Education() {
-  const education = [
-    {
-      degree: "Intermediate",
-      institution: "City Montessori School",
-      year: "2023",
-      details: [
-        "Learning in Science and Mathematics",
-        "Passed with Distinction",
-      ],
-    },
-    {
-      degree: "Bachelor's Degree in Computer Science",
-      institution: "Indian Institute of Information Technology Kota",
-      year: "2027 (Ongoing)",
-      details: [
-        "Major in Computer Science",
-        "Relevant coursework: Algorithms, Data Structures, Web Development",
-      ],
-    },
-  ];
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const lineRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        lineRef.current,
+        { scaleY: 0 },
+        {
+          scaleY: 1,
+          transformOrigin: "top",
+          ease: "none",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 70%",
+            end: "bottom 80%",
+            scrub: true,
+          },
+        }
+      );
+
+      gsap.from(".edu-block", {
+        opacity: 0,
+        y: 28,
+        duration: 0.7,
+        ease: "power2.out",
+        stagger: 0.25,
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 75%",
+        },
+      });
+
+      gsap.from(".edu-underline", {
+        scaleX: 0,
+        transformOrigin: "left",
+        duration: 0.6,
+        ease: "power2.out",
+        stagger: 0.25,
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 75%",
+        },
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
+  <>
     <section
-      id="education"
-      className="relative py-16 bg-gradient-to-b from-neutral-900 to-black"
+    ref={sectionRef}
+    id="education"
+    className="bg-black text-white px-6 md:px-16 py-32 overflow-x-hidden"
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 text-center">
-          <div className="flex items-center justify-center mb-4">
-            <hr className="w-10 border-white/60" />
-            <span className="mx-4 text-white/70 text-sm uppercase tracking-wider">
-              Education
-            </span>
-            <hr className="w-10 border-white/60" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
-            My{" "}
-            <span className="font-light italic opacity-80 text-white/70">
-              Education
-            </span>
-          </h2>
+      {/* Header */}
+      <div className="max-w-6xl mx-auto mb-28">
+        <h2 className="text-[3rem] md:text-[5rem] font-bold uppercase tracking-tight">
+          Education <span className="text-gray-500">/</span>
+        </h2>
+        <p className="text-gray-400 mt-2 max-w-xl">
+          A timeline of academic growth and learning.
+        </p>
+      </div>
+
+      {/* Timeline */}
+      <div className="relative max-w-6xl mx-auto flex">
+        {/* Vertical Line — narrower */}
+        <div className="relative w-8 flex justify-center">
+          <div
+            ref={lineRef}
+            className="w-[2px] bg-white/20 h-full origin-top"
+          />
         </div>
-        <div className="space-y-8">
-          {education.map((item, idx) => (
+
+        {/* Entries — wider + less left padding */}
+        <div className="flex flex-col gap-28 pl-8 w-full">
+          {education.map((edu) => (
             <div
-              key={idx}
-              className="relative bg-neutral-900 border border-white/10 rounded-2xl shadow-lg p-8 transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
+              key={edu.degree}
+              className="edu-block relative group max-w-3xl"
             >
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                <div>
-                  <h3 className="text-xl md:text-2xl font-semibold text-white">
-                    {item.degree}
-                  </h3>
-                  <p className="text-white/80 mt-1">{item.institution}</p>
-                </div>
-                <span className="mt-2 md:mt-0 text-white/60 font-medium text-lg">
-                  {item.year}
-                </span>
-              </div>
-              <ul className="mt-4 list-disc list-inside text-white/70 space-y-1">
-                {item.details.map((detail, i) => (
-                  <li key={i}>{detail}</li>
+              {/* Dot */}
+              <span className="absolute -left-[2.1rem] top-2 w-3.5 h-3.5 rounded-full bg-white transition-transform duration-300 group-hover:scale-125" />
+
+              {/* Content */}
+              <span className="text-sm tracking-widest text-gray-500 uppercase">
+                {edu.year}
+              </span>
+
+              <h3 className="text-2xl md:text-3xl font-semibold mt-2">
+                {edu.degree}
+              </h3>
+
+              <div className="edu-underline h-[2px] w-20 bg-white/40 mt-2" />
+
+              <p className="text-gray-400 mt-3 text-lg">
+                {edu.institution}
+              </p>
+
+              <ul className="mt-4 list-disc list-inside text-gray-300 space-y-1">
+                {edu.points.map((p) => (
+                  <li key={p}>{p}</li>
                 ))}
               </ul>
-              <div className="absolute -inset-2 rounded-2xl bg-gradient-to-r from-white/10 to-white/0 opacity-0 blur-2xl transition duration-300 group-hover:opacity-10 pointer-events-none" />
             </div>
           ))}
         </div>
       </div>
-      {/* Bottom Divider */}
-      <div className="mt-16">
-        <hr className="border-t border-white/40 opacity-40 w-full" />
-      </div>
     </section>
+  
+    {/* Bottom Separator Line */}
+    <div className="relative z-50">
+      <div className="h-6" />
+      <div className="mx-auto w-full border-t border-white/70 opacity-40" />
+    </div>
+  </>
   );
 }

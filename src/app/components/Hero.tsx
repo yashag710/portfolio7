@@ -57,7 +57,7 @@ export default function Hero() {
           <div className="sticky bottom-0 flex flex-col items-center">
             <div className="w-px h-32 sm:h-40 md:h-54 bg-gradient-to-b from-white/30 to-transparent" />
             <div className="rotate-180 text-neutral-500 [writing-mode:vertical-lr] text-xs sm:text-sm tracking-widest mt-6 mb-6">
-              2025
+              2026
             </div>
           </div>
         </div>

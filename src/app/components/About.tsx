@@ -81,11 +81,11 @@ export default function About() {
             initial="hidden"
             animate="visible"
             whileHover={{ scale: 1.01, transition: { duration: 0.3 } }}
-          >
+          >s
             <div className="absolute inset-0">
               <div className="relative h-full w-full">
                 <Image
-                  src="/images/photos/yash_front7.webp"
+                  src="/images/photos/yash9.jpeg"
                   alt="Personal portrait"
                   fill
                   className="object-cover object-[center_top] brightness-90 rounded-xl sm:rounded-2xl"

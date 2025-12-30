@@ -8,7 +8,7 @@ export function Skills() {
   const skills = [
     {
       title: "Blockchain Development",
-      image: "/images/skills/blockchain.webp",
+      image: "/images/skills/blockchain.png",
       className: "absolute top-[8%] left-[8%] md:top-[10%] md:left-[10%] rotate-[-3deg]",
     },
     {
@@ -18,12 +18,12 @@ export function Skills() {
     },
     {
       title: "Solidity",
-      image: "/images/skills/solidity.jpg",
+      image: "/images/skills/sol.png",
       className: "absolute top-[70%] left-[8%] md:top-[72%] md:left-[10%] rotate-[-2deg]",
     },
     {
       title: "Javascript",
-      image: "/images/skills/js.png",
+      image: "/images/skills/js.webp",
       className: "absolute top-[10%] right-[10%] md:top-[12%] md:right-[12%] rotate-[4deg]",
     },
     {
@@ -33,12 +33,12 @@ export function Skills() {
     },
     {
       title: "MongoDB",
-      image: "/images/skills/mongodb.webp",
+      image: "/images/skills/mongo.webp",
       className: "absolute top-[40%] right-[8%] md:top-[42%] md:right-[10%] rotate-[3deg]",
     },
     {
-      title: "React & Next.js",
-      image: "/images/skills/nextjs.webp",
+      title: "Next.js",
+      image: "/images/skills/nextjs.png",
       className: "absolute top-[60%] right-[15%] md:top-[62%] md:right-[12%] rotate-[-4deg]",
     },
     {
@@ -48,18 +48,13 @@ export function Skills() {
     },
     {
       title: "Tailwind CSS",
-      image: "/images/skills/tailwindcss.webp",
+      image: "/images/skills/tailwind.webp",
       className: "absolute top-[30%] left-[40%] md:top-[32%] md:left-[45%] rotate-[-5deg]",
     },
     {
       title: "Node.js",
       image: "/images/skills/nodejs.webp",
       className: "absolute top-[50%] left-[50%] md:top-[52%] md:left-[55%] rotate-[4deg]",
-    },
-    {
-      title: "Apache Kafka",
-      image: "/images/skills/kafka.webp",
-      className: "absolute top-[65%] right-[30%] md:top-[68%] md:right-[20%] rotate-[-6deg]",
     },
   ];
 
@@ -75,12 +70,12 @@ export function Skills() {
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative">
-          <div className="mb-12 sm:mb-16 md:mb-20 text-center relative z-10">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white">
-              Skills & Technologies
+          <div className="mb-12 sm:mb-16 md:mb-20 relative z-10">
+            <h2 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] font-bold uppercase tracking-tight text-white leading-none">
+              Skills & Tech<span className="text-gray-500">/</span>
             </h2>
-            <p className="mt-3 sm:mt-4 text-base sm:text-lg text-neutral-400">
-              Technologies and tools I work with
+            <p className="mt-4 ml-1 sm:ml-2 max-w-xl text-neutral-400 text-sm sm:text-base md:text-lg">
+              Technologies and tools I work with.
             </p>
           </div>
 
