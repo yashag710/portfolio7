@@ -4,7 +4,6 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Montserrat, Nunito } from 'next/font/google';
-import { BackgroundBeamWithCollision } from './ui/BackgroundBeamWithCollision';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 const nunito = Nunito({ subsets: ['latin'] });
@@ -43,10 +42,6 @@ export default function About() {
       <div className="relative z-50">
         <div className="mx-auto w-screen border-t border-white/70 opacity-40" />
         <div className="h-6" />
-      </div>
-
-      <div className="absolute inset-0 -z-10">
-        <BackgroundBeamWithCollision className="w-full h-full !bg-[#0a0b0f]" />
       </div>
 
       {/* Main Content */}
