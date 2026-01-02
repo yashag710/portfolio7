@@ -17,7 +17,7 @@ const data: Record<string, { desc: string; url: string }> = {
   },
   "BagVati Store": {
     desc: "An eCommerce platform built using Express, MongoDB, and EJS.",
-    url: "https://bagvati.onrender.com/",
+    url: "https://www.bagvati.works",
   },
 };
 
